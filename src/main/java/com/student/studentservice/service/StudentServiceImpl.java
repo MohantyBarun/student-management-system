@@ -1,7 +1,6 @@
 package com.student.studentservice.service;
 
 import com.student.studentservice.dto.StudentRequestDTO;
-import com.student.studentservice.dto.StudentResponseDTO;
 import com.student.studentservice.entity.Student;
 import com.student.studentservice.exception.DuplicateEmailException;
 import com.student.studentservice.repository.StudentRepository;
