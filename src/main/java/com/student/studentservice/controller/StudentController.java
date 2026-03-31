@@ -36,11 +36,17 @@ public class StudentController {
         List<StudentResponseDTO> students= studentService.getAllStudents();
         return ResponseEntity.status(HttpStatus.OK).body(students);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/getStudent/{id}")
     public ResponseEntity<StudentResponseDTO> getStudentById(@PathVariable Long id){
-        log.info("GET /students/{} called", id);
+        log.info("GET /students/getStudent/{} called", id);
         StudentResponseDTO studentResponseDTO=studentService.getStudentById(id);
         return ResponseEntity.status(HttpStatus.OK).body(studentResponseDTO);
+    }
+    @DeleteMapping("/deleteStudent/{id}")
+    public ResponseEntity<String> deleteStudentById(@PathVariable Long id){
+        log.info("DELETE /students/deleteStudent/{} called", id);
+        String message=studentService.deleteStudent(id);
+        return ResponseEntity.status(HttpStatus.OK).body(message);
     }
 
 }

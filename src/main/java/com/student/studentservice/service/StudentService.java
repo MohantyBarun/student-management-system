@@ -10,4 +10,5 @@ public interface StudentService {
     String saveStudent(StudentRequestDTO requestDTO);
     List<StudentResponseDTO> getAllStudents();
     StudentResponseDTO getStudentById(Long id);
+    String deleteStudent(Long id);
 }

@@ -63,4 +63,10 @@ public class StudentServiceImpl implements  StudentService{
         studentResponseDTO.setAge(student.getAge());
         return  studentResponseDTO;
     }
+    @Override
+    public String deleteStudent(Long id){
+        studentRepository.deleteById(id);
+        return ("Student deleted successfully");
+
+    }
     }
