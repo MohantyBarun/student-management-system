@@ -19,13 +19,13 @@ import java.util.List;
 public class StudentController {
     private final StudentService studentService;
 
-    @PostMapping("/save")
+    @PostMapping("/register")
     public ResponseEntity<String> createStudent(
             @Valid @RequestBody StudentRequestDTO requestDTO) {
 
-        log.info("POST /students/save called");
+        log.info("POST /students/register called");
 
-        String message = studentService.saveStudent(requestDTO);
+        String message = studentService.registerStudent(requestDTO);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(message);
 

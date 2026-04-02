@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface StudentService {
-    String saveStudent(StudentRequestDTO requestDTO);
+    String registerStudent(StudentRequestDTO requestDTO);
     List<StudentResponseDTO> getAllStudents();
     StudentResponseDTO getStudentById(Long id);
     String deleteStudent(Long id);
