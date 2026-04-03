@@ -10,6 +10,7 @@ import java.time.LocalDate;
 
 @Data
 public class StudentRequestDTO {
+    //Data for persons table
     @NotBlank(message = "Name cannot be blank")
     @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     private String name;
@@ -18,6 +19,7 @@ public class StudentRequestDTO {
     @Email(message = "Invalid format of email")
     private String email;
 
+    //data for students table
     @NotBlank(message = "Department cannot be empty")
     private String department;
 
@@ -29,10 +31,12 @@ public class StudentRequestDTO {
 
     @NotNull(message = "Role cannot be blank")
     @Enumerated(EnumType.STRING)
-    private Roles role= Roles.STUDENT;
+    private Roles role= Roles.ROLE_STUDENT;
 
+    @Size(max = 400)
     private String presentAddress;
 
+    @Size(max = 400)
     private String permanentAddress;
 
 }
