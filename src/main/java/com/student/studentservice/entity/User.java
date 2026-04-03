@@ -54,7 +54,7 @@ public class User {
     @OneToOne
     @MapsId
     @JoinColumn(name = "id")
-    private Student student;
+    private Persons persons;
 
     @CreatedDate
     @Column(name = "created_At", updatable = false)
